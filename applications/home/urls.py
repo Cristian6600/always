@@ -7,9 +7,15 @@ app_name = "home_app"
 urlpatterns = [
 
     path(
-        'e', 
+        '', 
         views.QHola.as_view(),
         name='publico',
+    ),
+    
+    path(
+        'contacto', 
+        views.ContatoCreateView.as_view(),
+        name='contacto',
     ),
 
 ]

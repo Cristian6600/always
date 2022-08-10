@@ -1,0 +1,17 @@
+{% extends "home/base_home.html" %} 
+{% load static %} 
+{% block panel-content %}
+<h1>Vista  contacto</h1>
+
+<form method="POST" enctype="multipart/form-data">
+ 
+    <!-- Security token -->
+    {% csrf_token %}
+ 
+    <!-- Using the formset -->
+    {{ form.as_p }}
+     
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock panel-content %}

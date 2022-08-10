@@ -3,9 +3,52 @@
 {% load static %}
 
 {% block content %}
-<h1>Holas</h1>
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+  
+  <div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Tony</li>
+        <li><a href="{% url 'home_app:publico' %}">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#0">Soluciones</a>
+          <ul class="submenu menu vertical" data-submenu>
+            <li><a href="#0">Desarrollo de software</a></li>
+            <li><a href="#0">Automatizacion</a></li>
+            <li><a href="#0">Three</a></li>
+          </ul>
+        </li>
+        <li><a href="#0">Nosotros</a></li>
+        <li><a href="{% url 'home_app:contacto' %}">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Buscar"></li>
+        <li><button type="button" class="button">Buscar</button></li>
+      </ul>
+    </div>
+  </div>
 
-    {% block panel-content %}
-    {% endblock panel-content %}
+  {% block panel-content %}
+  {% endblock panel-content %}
+
+  <div class="row column">
+    <hr>
+    <ul class="menu">
+      <li>Yeti Store</li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="float-right">Copyright 2016</li>
+    </ul>
+  </div>
+
+  
+
+    
 
 {% endblock content %}
